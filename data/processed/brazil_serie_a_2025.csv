@@ -1,0 +1,381 @@
+﻿date,matchday,home_team,away_team,home_goals,away_goals,kickoff_time
+2025-03-29,1,São Paulo FC,SC Recife,0,0,18:30
+2025-03-29,1,Cruzeiro EC,Mirassol FC,2,1,
+2025-03-29,1,Grêmio FBPA,CA Mineiro,2,1,
+2025-03-29,1,Fortaleza EC,Fluminense FC,2,0,
+2025-03-29,1,EC Juventude,EC Vitória,2,0,
+2025-03-29,1,CR Flamengo,SC Internacional,1,1,21:00
+2025-03-30,1,SE Palmeiras,Botafogo FR,0,0,16:00
+2025-03-30,1,CR Vasco da Gama,Santos FC,2,1,18:30
+2025-03-30,1,EC Bahia,SC Corinthians Paulista,1,1,20:00
+2025-03-31,1,RB Bragantino,Ceará SC,2,2,20:00
+2025-04-05,2,SC Corinthians Paulista,CR Vasco da Gama,3,0,18:30
+2025-04-05,2,Ceará SC,Grêmio FBPA,2,0,
+2025-04-05,2,Botafogo FR,EC Juventude,2,0,21:00
+2025-04-06,2,Fluminense FC,RB Bragantino,2,1,16:00
+2025-04-06,2,CA Mineiro,São Paulo FC,0,0,
+2025-04-06,2,Mirassol FC,Fortaleza EC,1,1,18:30
+2025-04-06,2,SC Internacional,Cruzeiro EC,3,0,
+2025-04-06,2,EC Vitória,CR Flamengo,1,2,
+2025-04-06,2,SC Recife,SE Palmeiras,1,2,
+2025-04-06,2,Santos FC,EC Bahia,2,2,20:30
+2025-04-12,3,RB Bragantino,Botafogo FR,1,0,16:00
+2025-04-12,3,EC Juventude,Ceará SC,2,1,
+2025-04-12,3,SE Palmeiras,SC Corinthians Paulista,2,0,18:30
+2025-04-12,3,CR Vasco da Gama,SC Recife,3,1,21:00
+2025-04-13,3,EC Bahia,Mirassol FC,1,1,16:00
+2025-04-13,3,São Paulo FC,Cruzeiro EC,1,1,17:30
+2025-04-13,3,Grêmio FBPA,CR Flamengo,0,2,
+2025-04-13,3,Fluminense FC,Santos FC,1,0,19:30
+2025-04-13,3,Fortaleza EC,SC Internacional,0,0,20:00
+2025-04-13,3,CA Mineiro,EC Vitória,2,2,20:30
+2025-04-15,4,Ceará SC,CR Vasco da Gama,2,1,21:30
+2025-04-16,4,Botafogo FR,São Paulo FC,2,2,18:30
+2025-04-16,4,Mirassol FC,Grêmio FBPA,4,1,19:00
+2025-04-16,4,SC Recife,RB Bragantino,0,1,
+2025-04-16,4,SC Corinthians Paulista,Fluminense FC,0,2,19:30
+2025-04-16,4,SC Internacional,SE Palmeiras,0,1,
+2025-04-16,4,CR Flamengo,EC Juventude,6,0,21:30
+2025-04-16,4,Santos FC,CA Mineiro,2,0,
+2025-04-16,4,EC Vitória,Fortaleza EC,2,1,
+2025-04-17,4,Cruzeiro EC,EC Bahia,3,0,21:30
+2025-04-19,5,SC Corinthians Paulista,SC Recife,2,1,16:00
+2025-04-19,5,CR Vasco da Gama,CR Flamengo,0,0,18:30
+2025-04-19,5,Grêmio FBPA,SC Internacional,1,1,21:00
+2025-04-20,5,EC Juventude,Mirassol FC,2,2,11:00
+2025-04-20,5,São Paulo FC,Santos FC,2,1,16:00
+2025-04-20,5,CA Mineiro,Botafogo FR,1,0,
+2025-04-20,5,Fluminense FC,EC Vitória,1,1,18:30
+2025-04-20,5,Fortaleza EC,SE Palmeiras,1,2,
+2025-04-20,5,RB Bragantino,Cruzeiro EC,1,0,20:30
+2025-04-21,5,EC Bahia,Ceará SC,1,0,20:00
+2025-04-26,6,SC Internacional,EC Juventude,3,1,16:00
+2025-04-26,6,Mirassol FC,CA Mineiro,2,2,18:30
+2025-04-26,6,Ceará SC,São Paulo FC,1,1,
+2025-04-26,6,SC Recife,Fortaleza EC,0,0,20:00
+2025-04-26,6,Botafogo FR,Fluminense FC,2,0,21:00
+2025-04-27,6,CR Flamengo,SC Corinthians Paulista,4,0,16:00
+2025-04-27,6,SE Palmeiras,EC Bahia,0,1,18:30
+2025-04-27,6,Cruzeiro EC,CR Vasco da Gama,1,0,
+2025-04-27,6,EC Vitória,Grêmio FBPA,1,1,
+2025-04-27,6,Santos FC,RB Bragantino,1,2,20:30
+2025-05-02,7,São Paulo FC,Fortaleza EC,0,0,21:30
+2025-05-03,7,Fluminense FC,SC Recife,2,1,18:30
+2025-05-03,7,SC Corinthians Paulista,SC Internacional,4,2,
+2025-05-03,7,Ceará SC,EC Vitória,1,0,
+2025-05-03,7,EC Bahia,Botafogo FR,1,0,21:00
+2025-05-04,7,CR Vasco da Gama,SE Palmeiras,0,1,16:00
+2025-05-04,7,Grêmio FBPA,Santos FC,1,0,
+2025-05-04,7,Cruzeiro EC,CR Flamengo,2,1,18:30
+2025-05-05,7,RB Bragantino,Mirassol FC,1,0,19:00
+2025-05-05,7,EC Juventude,CA Mineiro,0,1,20:00
+2025-05-10,8,Fortaleza EC,EC Juventude,5,0,16:00
+2025-05-10,8,Mirassol FC,SC Corinthians Paulista,2,1,18:30
+2025-05-10,8,Grêmio FBPA,RB Bragantino,1,1,
+2025-05-10,8,EC Vitória,CR Vasco da Gama,2,1,
+2025-05-10,8,CR Flamengo,EC Bahia,1,0,21:00
+2025-05-11,8,SC Recife,Cruzeiro EC,0,4,16:00
+2025-05-11,8,SE Palmeiras,São Paulo FC,1,0,17:30
+2025-05-11,8,CA Mineiro,Fluminense FC,3,2,
+2025-05-11,8,Botafogo FR,SC Internacional,4,0,20:00
+2025-05-12,8,Santos FC,Ceará SC,0,0,20:00
+2025-05-17,9,Ceará SC,SC Recife,2,0,16:00
+2025-05-17,9,CR Vasco da Gama,Fortaleza EC,3,0,18:30
+2025-05-17,9,São Paulo FC,Grêmio FBPA,2,1,21:00
+2025-05-18,9,SC Corinthians Paulista,Santos FC,1,0,16:00
+2025-05-18,9,EC Bahia,EC Vitória,2,1,
+2025-05-18,9,EC Juventude,Fluminense FC,1,1,
+2025-05-18,9,CR Flamengo,Botafogo FR,0,0,18:30
+2025-05-18,9,RB Bragantino,SE Palmeiras,1,2,
+2025-05-18,9,Cruzeiro EC,CA Mineiro,0,0,20:30
+2025-05-18,9,SC Internacional,Mirassol FC,1,1,
+2025-05-24,10,Fluminense FC,CR Vasco da Gama,2,1,18:30
+2025-05-24,10,São Paulo FC,Mirassol FC,0,2,
+2025-05-24,10,CA Mineiro,SC Corinthians Paulista,0,0,21:00
+2025-05-25,10,Grêmio FBPA,EC Bahia,1,0,11:00
+2025-05-25,10,SE Palmeiras,CR Flamengo,0,2,16:00
+2025-05-25,10,SC Recife,SC Internacional,1,1,
+2025-05-25,10,EC Vitória,Santos FC,0,1,18:30
+2025-05-25,10,Fortaleza EC,Cruzeiro EC,0,2,20:30
+2025-05-26,10,RB Bragantino,EC Juventude,1,0,20:00
+2025-05-31,11,EC Bahia,São Paulo FC,2,1,18:30
+2025-05-31,11,CR Vasco da Gama,RB Bragantino,0,2,21:00
+2025-06-01,11,Mirassol FC,SC Recife,1,0,11:00
+2025-06-01,11,EC Juventude,Grêmio FBPA,0,2,16:00
+2025-06-01,11,Santos FC,Botafogo FR,0,1,
+2025-06-01,11,Ceará SC,CA Mineiro,0,1,18:30
+2025-06-01,11,CR Flamengo,Fortaleza EC,5,0,
+2025-06-01,11,SC Corinthians Paulista,EC Vitória,0,0,
+2025-06-01,11,Cruzeiro EC,SE Palmeiras,2,1,19:30
+2025-06-01,11,SC Internacional,Fluminense FC,0,2,20:30
+2025-06-04,10,Botafogo FR,Ceará SC,3,2,20:00
+2025-06-12,12,RB Bragantino,EC Bahia,0,3,19:00
+2025-06-12,12,EC Vitória,Cruzeiro EC,0,0,
+2025-06-12,12,Fortaleza EC,Santos FC,2,3,19:30
+2025-06-12,12,Grêmio FBPA,SC Corinthians Paulista,1,1,20:00
+2025-06-12,12,São Paulo FC,CR Vasco da Gama,1,3,21:30
+2025-06-12,12,CA Mineiro,SC Internacional,2,0,
+2025-07-12,13,CR Flamengo,São Paulo FC,2,0,16:30
+2025-07-12,13,SC Internacional,EC Vitória,1,0,
+2025-07-12,13,CR Vasco da Gama,Botafogo FR,0,2,18:30
+2025-07-12,13,EC Bahia,CA Mineiro,2,1,21:00
+2025-07-13,13,SC Corinthians Paulista,RB Bragantino,1,2,19:00
+2025-07-13,13,Cruzeiro EC,Grêmio FBPA,4,1,20:30
+2025-07-13,13,Fortaleza EC,Ceará SC,0,1,
+2025-07-14,13,EC Juventude,SC Recife,2,0,20:00
+2025-07-16,14,SE Palmeiras,Mirassol FC,1,1,19:00
+2025-07-16,14,Ceará SC,SC Corinthians Paulista,0,1,19:30
+2025-07-16,14,Santos FC,CR Flamengo,1,0,20:00
+2025-07-16,14,Botafogo FR,EC Vitória,0,0,21:30
+2025-07-16,14,RB Bragantino,São Paulo FC,2,2,
+2025-07-17,14,Fluminense FC,Cruzeiro EC,0,2,19:30
+2025-07-19,15,Fortaleza EC,EC Bahia,1,1,16:00
+2025-07-19,15,CR Vasco da Gama,Grêmio FBPA,1,1,17:30
+2025-07-19,15,Mirassol FC,Santos FC,3,0,18:30
+2025-07-19,15,São Paulo FC,SC Corinthians Paulista,2,0,21:00
+2025-07-20,15,SC Internacional,Ceará SC,1,0,11:00
+2025-07-20,15,Cruzeiro EC,EC Juventude,4,0,16:00
+2025-07-20,15,EC Vitória,RB Bragantino,1,0,
+2025-07-20,15,SE Palmeiras,CA Mineiro,3,2,17:30
+2025-07-20,15,SC Recife,Botafogo FR,0,1,
+2025-07-20,15,CR Flamengo,Fluminense FC,1,0,19:30
+2025-07-23,16,Fluminense FC,SE Palmeiras,1,2,19:00
+2025-07-23,16,Ceará SC,Mirassol FC,0,2,
+2025-07-23,16,SC Corinthians Paulista,Cruzeiro EC,0,0,19:30
+2025-07-23,16,Santos FC,SC Internacional,1,2,21:30
+2025-07-23,16,RB Bragantino,CR Flamengo,1,2,
+2025-07-23,16,EC Vitória,SC Recife,2,2,
+2025-07-24,16,EC Juventude,São Paulo FC,0,1,19:00
+2025-07-26,17,Botafogo FR,SC Corinthians Paulista,1,1,18:30
+2025-07-26,17,Mirassol FC,EC Vitória,1,1,
+2025-07-26,17,Fortaleza EC,RB Bragantino,3,1,
+2025-07-26,17,SC Recife,Santos FC,2,2,
+2025-07-26,17,SE Palmeiras,Grêmio FBPA,1,0,21:00
+2025-07-27,17,São Paulo FC,Fluminense FC,3,1,16:00
+2025-07-27,17,Cruzeiro EC,Ceará SC,1,2,
+2025-07-27,17,SC Internacional,CR Vasco da Gama,1,1,18:30
+2025-07-27,17,EC Bahia,EC Juventude,3,0,
+2025-07-27,17,CR Flamengo,CA Mineiro,1,0,20:30
+2025-07-29,14,Grêmio FBPA,Fortaleza EC,2,1,20:30
+2025-08-02,18,SC Recife,EC Bahia,0,0,16:00
+2025-08-02,18,Mirassol FC,CR Vasco da Gama,3,2,18:30
+2025-08-02,18,Fluminense FC,Grêmio FBPA,1,0,21:00
+2025-08-03,18,Botafogo FR,Cruzeiro EC,0,2,16:00
+2025-08-03,18,SC Corinthians Paulista,Fortaleza EC,1,1,
+2025-08-03,18,CA Mineiro,RB Bragantino,2,1,18:30
+2025-08-03,18,Ceará SC,CR Flamengo,1,1,
+2025-08-03,18,EC Vitória,SE Palmeiras,2,2,19:30
+2025-08-03,18,SC Internacional,São Paulo FC,1,2,20:30
+2025-08-04,18,Santos FC,EC Juventude,3,1,20:00
+2025-08-09,19,CR Flamengo,Mirassol FC,2,1,18:30
+2025-08-09,19,São Paulo FC,EC Vitória,2,0,
+2025-08-09,19,RB Bragantino,SC Internacional,1,3,
+2025-08-09,19,Fortaleza EC,Botafogo FR,0,5,20:30
+2025-08-09,19,EC Bahia,Fluminense FC,3,3,21:00
+2025-08-10,19,CR Vasco da Gama,CA Mineiro,1,1,16:00
+2025-08-10,19,SE Palmeiras,Ceará SC,2,1,
+2025-08-10,19,Cruzeiro EC,Santos FC,1,2,18:30
+2025-08-10,19,Grêmio FBPA,SC Recife,0,1,20:30
+2025-08-11,19,EC Juventude,SC Corinthians Paulista,2,1,20:00
+2025-08-16,20,Fluminense FC,Fortaleza EC,2,1,16:00
+2025-08-16,20,Ceará SC,RB Bragantino,1,0,
+2025-08-16,20,EC Vitória,EC Juventude,2,2,18:30
+2025-08-16,20,SC Recife,São Paulo FC,2,2,
+2025-08-16,20,SC Corinthians Paulista,EC Bahia,1,2,21:00
+2025-08-17,20,Santos FC,CR Vasco da Gama,0,6,16:00
+2025-08-17,20,CA Mineiro,Grêmio FBPA,1,3,
+2025-08-17,20,SC Internacional,CR Flamengo,1,3,18:30
+2025-08-17,20,Botafogo FR,SE Palmeiras,0,1,20:30
+2025-08-18,20,Mirassol FC,Cruzeiro EC,1,1,20:00
+2025-08-20,14,EC Juventude,CR Vasco da Gama,2,0,19:00
+2025-08-23,21,RB Bragantino,Fluminense FC,4,2,16:00
+2025-08-23,21,Cruzeiro EC,SC Internacional,2,1,18:30
+2025-08-23,21,Grêmio FBPA,Ceará SC,0,0,21:00
+2025-08-24,21,CR Vasco da Gama,SC Corinthians Paulista,2,3,16:00
+2025-08-24,21,EC Bahia,Santos FC,2,0,
+2025-08-24,21,Fortaleza EC,Mirassol FC,0,1,18:30
+2025-08-24,21,EC Juventude,Botafogo FR,1,3,
+2025-08-24,21,São Paulo FC,CA Mineiro,2,0,20:30
+2025-08-25,21,SE Palmeiras,SC Recife,3,0,19:00
+2025-08-25,21,CR Flamengo,EC Vitória,8,0,21:00
+2025-08-30,22,Ceará SC,EC Juventude,0,1,16:00
+2025-08-30,22,Botafogo FR,RB Bragantino,4,1,18:30
+2025-08-30,22,Cruzeiro EC,São Paulo FC,1,0,21:00
+2025-08-31,22,CR Flamengo,Grêmio FBPA,1,1,16:00
+2025-08-31,22,Santos FC,Fluminense FC,0,0,
+2025-08-31,22,SC Corinthians Paulista,SE Palmeiras,1,1,18:30
+2025-08-31,22,Mirassol FC,EC Bahia,5,1,
+2025-08-31,22,EC Vitória,CA Mineiro,1,0,
+2025-08-31,22,SC Internacional,Fortaleza EC,2,1,20:30
+2025-08-31,22,SC Recife,CR Vasco da Gama,2,3,
+2025-09-13,23,Grêmio FBPA,Mirassol FC,0,1,16:00
+2025-09-13,23,Fortaleza EC,EC Vitória,2,0,
+2025-09-13,23,SE Palmeiras,SC Internacional,4,1,18:30
+2025-09-13,23,Fluminense FC,SC Corinthians Paulista,0,1,21:00
+2025-09-14,23,RB Bragantino,SC Recife,1,1,11:00
+2025-09-14,23,CA Mineiro,Santos FC,1,1,16:00
+2025-09-14,23,EC Juventude,CR Flamengo,0,2,
+2025-09-14,23,São Paulo FC,Botafogo FR,1,0,17:30
+2025-09-14,23,CR Vasco da Gama,Ceará SC,2,2,20:30
+2025-09-15,23,EC Bahia,Cruzeiro EC,1,2,20:00
+2025-09-17,12,Botafogo FR,Mirassol FC,3,3,19:30
+2025-09-20,24,EC Vitória,Fluminense FC,0,1,16:00
+2025-09-20,24,Botafogo FR,CA Mineiro,1,0,18:30
+2025-09-20,24,Ceará SC,EC Bahia,1,1,
+2025-09-20,24,SE Palmeiras,Fortaleza EC,4,1,21:00
+2025-09-21,24,Mirassol FC,EC Juventude,2,0,16:00
+2025-09-21,24,CR Flamengo,CR Vasco da Gama,1,1,17:30
+2025-09-21,24,SC Internacional,Grêmio FBPA,2,3,
+2025-09-21,24,SC Recife,SC Corinthians Paulista,1,0,
+2025-09-21,24,Santos FC,São Paulo FC,1,0,20:30
+2025-09-21,24,Cruzeiro EC,RB Bragantino,2,1,
+2025-09-24,16,CR Vasco da Gama,EC Bahia,3,1,19:30
+2025-09-24,16,Grêmio FBPA,Botafogo FR,1,1,
+2025-09-27,25,Fortaleza EC,SC Recife,1,0,16:00
+2025-09-27,25,CR Vasco da Gama,Cruzeiro EC,2,0,18:30
+2025-09-27,25,EC Juventude,SC Internacional,1,1,
+2025-09-27,25,CA Mineiro,Mirassol FC,1,0,21:00
+2025-09-28,25,Grêmio FBPA,EC Vitória,3,1,11:00
+2025-09-28,25,Fluminense FC,Botafogo FR,2,0,16:00
+2025-09-28,25,EC Bahia,SE Palmeiras,1,0,
+2025-09-28,25,RB Bragantino,Santos FC,2,2,18:30
+2025-09-28,25,SC Corinthians Paulista,CR Flamengo,1,2,20:30
+2025-09-29,25,São Paulo FC,Ceará SC,0,1,20:00
+2025-09-30,26,CA Mineiro,EC Juventude,0,0,21:30
+2025-10-01,26,SE Palmeiras,CR Vasco da Gama,3,0,19:00
+2025-10-01,26,Mirassol FC,RB Bragantino,1,1,
+2025-10-01,26,SC Recife,Fluminense FC,2,2,
+2025-10-01,26,SC Internacional,SC Corinthians Paulista,1,1,19:30
+2025-10-01,26,Botafogo FR,EC Bahia,2,1,21:30
+2025-10-01,26,Santos FC,Grêmio FBPA,1,1,
+2025-10-02,26,EC Vitória,Ceará SC,1,0,19:00
+2025-10-02,26,Fortaleza EC,São Paulo FC,0,2,19:30
+2025-10-02,26,CR Flamengo,Cruzeiro EC,0,0,20:30
+2025-10-04,27,Fluminense FC,CA Mineiro,3,0,18:30
+2025-10-04,27,RB Bragantino,Grêmio FBPA,1,0,
+2025-10-04,27,SC Internacional,Botafogo FR,2,0,
+2025-10-04,27,SC Corinthians Paulista,Mirassol FC,3,0,21:00
+2025-10-05,27,CR Vasco da Gama,EC Vitória,4,3,16:00
+2025-10-05,27,São Paulo FC,SE Palmeiras,2,3,
+2025-10-05,27,EC Bahia,CR Flamengo,1,0,18:30
+2025-10-05,27,EC Juventude,Fortaleza EC,1,2,
+2025-10-05,27,Cruzeiro EC,SC Recife,1,1,20:30
+2025-10-05,27,Ceará SC,Santos FC,3,0,
+2025-10-08,14,CA Mineiro,SC Recife,3,1,19:00
+2025-10-08,13,Mirassol FC,Fluminense FC,2,1,21:00
+2025-10-11,12,SE Palmeiras,EC Juventude,4,1,19:00
+2025-10-15,28,SE Palmeiras,RB Bragantino,5,1,19:00
+2025-10-15,28,Botafogo FR,CR Flamengo,0,3,19:30
+2025-10-15,28,Mirassol FC,SC Internacional,3,1,20:00
+2025-10-15,28,SC Recife,Ceará SC,1,1,
+2025-10-15,28,Santos FC,SC Corinthians Paulista,3,1,21:30
+2025-10-15,28,CA Mineiro,Cruzeiro EC,1,1,
+2025-10-15,28,Fortaleza EC,CR Vasco da Gama,0,2,
+2025-10-16,28,Grêmio FBPA,São Paulo FC,2,0,19:00
+2025-10-16,28,Fluminense FC,EC Juventude,1,0,21:30
+2025-10-16,28,EC Vitória,EC Bahia,2,1,
+2025-10-18,29,SC Corinthians Paulista,CA Mineiro,1,0,18:30
+2025-10-18,29,Cruzeiro EC,Fortaleza EC,1,0,21:00
+2025-10-19,29,CR Flamengo,SE Palmeiras,3,2,16:00
+2025-10-19,29,Mirassol FC,São Paulo FC,3,0,18:30
+2025-10-19,29,SC Internacional,SC Recife,2,0,
+2025-10-19,29,Ceará SC,Botafogo FR,0,2,
+2025-10-19,29,EC Bahia,Grêmio FBPA,4,0,20:30
+2025-10-20,29,EC Juventude,RB Bragantino,1,0,19:00
+2025-10-20,29,CR Vasco da Gama,Fluminense FC,2,0,19:30
+2025-10-20,29,Santos FC,EC Vitória,0,1,21:30
+2025-10-22,14,EC Bahia,SC Internacional,1,0,19:00
+2025-10-25,30,CA Mineiro,Ceará SC,1,0,16:00
+2025-10-25,30,EC Vitória,SC Corinthians Paulista,0,1,
+2025-10-25,30,Fluminense FC,SC Internacional,1,0,17:30
+2025-10-25,30,SC Recife,Mirassol FC,1,2,18:30
+2025-10-25,30,Fortaleza EC,CR Flamengo,1,0,19:30
+2025-10-25,30,São Paulo FC,EC Bahia,2,0,22:30
+2025-10-26,30,Botafogo FR,Santos FC,2,2,16:00
+2025-10-26,30,Grêmio FBPA,EC Juventude,3,1,
+2025-10-26,30,RB Bragantino,CR Vasco da Gama,0,3,18:30
+2025-10-26,30,SE Palmeiras,Cruzeiro EC,0,0,20:30
+2025-10-29,12,Fluminense FC,Ceará SC,1,0,19:00
+2025-11-01,31,Santos FC,Fortaleza EC,1,1,16:00
+2025-11-01,31,Cruzeiro EC,EC Vitória,3,1,
+2025-11-01,31,Mirassol FC,Botafogo FR,0,0,18:00
+2025-11-01,31,CR Flamengo,SC Recife,3,0,21:00
+2025-11-02,31,SC Corinthians Paulista,Grêmio FBPA,2,0,16:00
+2025-11-02,31,EC Bahia,RB Bragantino,2,1,
+2025-11-02,31,Ceará SC,Fluminense FC,2,0,
+2025-11-02,31,SC Internacional,CA Mineiro,0,0,18:30
+2025-11-02,31,EC Juventude,SE Palmeiras,0,2,
+2025-11-02,31,CR Vasco da Gama,São Paulo FC,0,2,20:30
+2025-11-05,32,RB Bragantino,SC Corinthians Paulista,2,1,19:00
+2025-11-05,32,EC Vitória,SC Internacional,1,0,
+2025-11-05,32,SC Recife,EC Juventude,0,2,
+2025-11-05,32,Botafogo FR,CR Vasco da Gama,3,0,19:30
+2025-11-05,32,CA Mineiro,EC Bahia,3,0,20:00
+2025-11-05,32,Grêmio FBPA,Cruzeiro EC,0,1,
+2025-11-05,32,São Paulo FC,CR Flamengo,2,2,21:30
+2025-11-06,32,Fluminense FC,Mirassol FC,1,0,19:30
+2025-11-06,32,Ceará SC,Fortaleza EC,1,1,20:00
+2025-11-06,32,SE Palmeiras,Santos FC,2,0,21:30
+2025-11-08,33,SC Recife,CA Mineiro,2,4,16:00
+2025-11-08,33,CR Vasco da Gama,EC Juventude,1,3,18:00
+2025-11-08,33,SC Internacional,EC Bahia,2,2,18:30
+2025-11-08,33,São Paulo FC,RB Bragantino,0,1,21:00
+2025-11-09,33,SC Corinthians Paulista,Ceará SC,0,1,16:00
+2025-11-09,33,Cruzeiro EC,Fluminense FC,0,0,
+2025-11-09,33,EC Vitória,Botafogo FR,0,0,
+2025-11-09,33,CR Flamengo,Santos FC,3,2,18:30
+2025-11-09,33,Mirassol FC,SE Palmeiras,2,1,20:30
+2025-11-09,33,Fortaleza EC,Grêmio FBPA,2,2,
+2025-11-12,16,CA Mineiro,Fortaleza EC,3,3,20:30
+2025-11-15,12,SC Recife,CR Flamengo,1,5,18:30
+2025-11-15,13,Santos FC,SE Palmeiras,1,0,21:00
+2025-11-16,37,RB Bragantino,CA Mineiro,2,0,19:00
+2025-11-18,34,Botafogo FR,SC Recife,3,2,20:30
+2025-11-19,37,SE Palmeiras,EC Vitória,0,0,19:30
+2025-11-19,34,Fluminense FC,CR Flamengo,2,1,21:30
+2025-11-19,34,Santos FC,Mirassol FC,1,1,
+2025-11-19,34,Grêmio FBPA,CR Vasco da Gama,2,0,
+2025-11-20,34,EC Juventude,Cruzeiro EC,3,3,16:00
+2025-11-20,34,EC Bahia,Fortaleza EC,2,3,18:00
+2025-11-20,34,SC Corinthians Paulista,São Paulo FC,3,1,19:30
+2025-11-20,34,Ceará SC,SC Internacional,1,2,21:30
+2025-11-22,35,Botafogo FR,Grêmio FBPA,3,2,19:30
+2025-11-22,35,CR Flamengo,RB Bragantino,3,0,21:30
+2025-11-22,35,SE Palmeiras,Fluminense FC,0,0,
+2025-11-23,35,São Paulo FC,EC Juventude,2,1,16:00
+2025-11-23,35,EC Bahia,CR Vasco da Gama,1,0,
+2025-11-23,35,SC Recife,EC Vitória,1,3,18:30
+2025-11-23,35,Cruzeiro EC,SC Corinthians Paulista,3,0,20:30
+2025-11-24,35,Mirassol FC,Ceará SC,3,0,19:00
+2025-11-24,35,SC Internacional,Santos FC,1,1,21:00
+2025-11-25,36,CA Mineiro,CR Flamengo,1,1,21:30
+2025-11-25,36,Grêmio FBPA,SE Palmeiras,3,2,
+2025-11-26,36,RB Bragantino,Fortaleza EC,0,1,19:00
+2025-11-27,36,Fluminense FC,São Paulo FC,6,0,20:30
+2025-11-28,36,EC Juventude,EC Bahia,1,1,19:00
+2025-11-28,36,CR Vasco da Gama,SC Internacional,5,1,19:30
+2025-11-28,36,Santos FC,SC Recife,3,0,21:30
+2025-11-29,36,EC Vitória,Mirassol FC,2,0,16:00
+2025-11-29,36,Ceará SC,Cruzeiro EC,1,1,21:00
+2025-11-30,36,SC Corinthians Paulista,Botafogo FR,2,2,16:00
+2025-11-30,35,Fortaleza EC,CA Mineiro,1,0,18:30
+2025-12-02,37,CR Vasco da Gama,Mirassol FC,0,2,19:00
+2025-12-02,37,Grêmio FBPA,Fluminense FC,1,2,21:30
+2025-12-03,37,Fortaleza EC,SC Corinthians Paulista,2,1,19:00
+2025-12-03,34,RB Bragantino,EC Vitória,4,0,19:00
+2025-12-03,37,EC Juventude,Santos FC,0,3,19:30
+2025-12-03,37,São Paulo FC,SC Internacional,3,0,20:00
+2025-12-03,37,EC Bahia,SC Recife,2,0,
+2025-12-03,34,CA Mineiro,SE Palmeiras,0,3,21:30
+2025-12-03,37,CR Flamengo,Ceará SC,1,0,21:30
+2025-12-04,37,Cruzeiro EC,Botafogo FR,2,2,19:30
+2025-12-06,38,Mirassol FC,CR Flamengo,3,3,18:30
+2025-12-07,38,Fluminense FC,EC Bahia,2,0,16:00
+2025-12-07,38,Botafogo FR,Fortaleza EC,4,2,
+2025-12-07,38,SC Corinthians Paulista,EC Juventude,1,1,
+2025-12-07,38,Santos FC,Cruzeiro EC,3,0,
+2025-12-07,38,CA Mineiro,CR Vasco da Gama,5,0,
+2025-12-07,38,SC Internacional,RB Bragantino,3,1,
+2025-12-07,38,EC Vitória,São Paulo FC,1,0,
+2025-12-07,38,Ceará SC,SE Palmeiras,1,3,
+2025-12-07,38,SC Recife,Grêmio FBPA,0,4,
