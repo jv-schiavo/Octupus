@@ -7,18 +7,36 @@ home_probabilities = {}
 lambda_away = 1.1
 away_probabilities = {}
 
-for goals in range(6):
+target_coverage = 0.9999
+max_home_goals = 0
+max_away_goals = 0
+matrix_coverage = 0.0
+
+while target_coverage > matrix_coverage:
+    home_coverage = poisson.cdf(max_home_goals, lambda_home)
+    away_coverage = poisson.cdf(max_away_goals, lambda_away)
+    matrix_coverage = home_coverage * away_coverage
+    
+    if matrix_coverage < target_coverage:
+        max_home_goals += 1
+        max_away_goals += 1
+
+print(max_home_goals)
+print(max_away_goals)
+print(f"Matrix Coverage: {matrix_coverage:.2%}")
+
+for goals in range(max_home_goals + 1):
     probability = poisson.pmf(goals, lambda_home)
     home_probabilities[goals] = probability 
 
-for goals in range(6):
+for goals in range(max_away_goals + 1):
     probability = poisson.pmf(goals, lambda_away)
     away_probabilities[goals] = probability
 
 score_probabilities = {}
 
-for home_goals in range(6):
-    for away_goals in range(6):
+for home_goals in range(max_home_goals + 1):
+    for away_goals in range(max_away_goals + 1):
         score_probabilities[(home_goals, away_goals)] = home_probabilities[home_goals] * away_probabilities[away_goals]
         
 #print(f"Score Probability: {score_probabilities[(2,1)]:.2%}")
@@ -41,6 +59,4 @@ for (home_goals, away_goals), probability in score_probabilities.items():
 
 #print(f"Draw Probability: {draw_probability:.2%}")
 
-total_coverage = (home_win_probability + away_win_probability + draw_probability)
 
-print(f"Total Coverage: {total_coverage:.2%}")
