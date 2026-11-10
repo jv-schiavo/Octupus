@@ -7,6 +7,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 RAW_FILE = PROJECT_ROOT / "data" / "raw" / "brazil_serie_a_2025.txt"
 
+OUTPUT_FILE = PROJECT_ROOT / "data" / "processed" / "brazil_serie_a_2025.csv"
+
 current_matchday = None
 current_date = None
 weekdays = ("sun", "mon", "tue", "wed", "thu", "fri", "sat")
@@ -47,7 +49,6 @@ with open(RAW_FILE, "r", encoding="utf-8-sig") as file:
                 else:
                     home_team = parts[0].strip()
                 
-            
 
                 match = {
                     "matchday": current_matchday,
@@ -60,9 +61,24 @@ with open(RAW_FILE, "r", encoding="utf-8-sig") as file:
 
                 matches.append(match)
 
-    #print(matches)
-    #print(f"Matches parsed: {len(matches)}")
-
+# Basic data validation
 df = pd.DataFrame(matches)
-print(df.head())
-print(len(df))
+
+if len(df) != 380:
+    raise ValueError(
+        f"Expected 380 matches and 20 teams. Found: {len(df)}")
+
+if df["home_team"].nunique() != 20:
+    raise ValueError(
+        f"Expected 20 teams. Found: {df['home_team'].nunique()}")
+
+if df.isnull().any().any():
+    raise ValueError("Found missing values")
+
+duplicates = df.duplicated(
+    subset=["date", "home_team", "away_team"]).sum()
+
+if duplicates > 0:
+    raise ValueError(f"Found {duplicates} duplicates fixtures")
+
+df.to_csv(OUTPUT_FILE, index=False)

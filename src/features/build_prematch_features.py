@@ -1,138 +1,86 @@
-
 from pathlib import Path
 import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-INPUT_FILE = (
-    PROJECT_ROOT / "data" / "processed" / "brazil_serie_a_2025.csv"
-)
+file_path = (PROJECT_ROOT / "data" / "processed" / "brazil_serie_a_2025.csv")
 
-OUTPUT_FILE = (
-    PROJECT_ROOT / "data" / "features" / "brazil_serie_a_2025_prematch.csv"
-)
-
-MIN_HISTORY = 50
-SMOOTHING = 5
-
-# 1. Load Silver data
-df = pd.read_csv(INPUT_FILE)
-
-required = {
-    "date", "home_team", "away_team",
-    "home_goals", "away_goals"
-}
-
-missing = required - set(df.columns)
-if missing:
-    raise ValueError(f"Missing columns: {missing}")
+df = pd.read_csv(file_path)
 
 df["date"] = pd.to_datetime(df["date"])
+df = df.sort_values("date")
 
-for column in ["home_goals", "away_goals"]:
-    df[column] = pd.to_numeric(df[column], errors="raise")
-
-if df[list(required)].isna().any().any():
-    raise ValueError("Missing required match data")
-
-if (df[["home_goals", "away_goals"]] < 0).any().any():
-    raise ValueError("Negative goals detected")
-
-df = df.sort_values("date").reset_index(drop=True)
-
-
-# 2. Smooth averages towards the league baseline
-def smoothed_rate(goals, league_average):
-    return (
-        goals.sum() + SMOOTHING * league_average
-    ) / (len(goals) + SMOOTHING)
-
-
-# 3. Generate features using only earlier matches
 features = []
+SMOOTHING = 5
 
-for _, match in df.iterrows():
+def smoothed_rate(goals, league_average):
+    total_goals = goals.sum()
+    number_of_matches = len(goals)
 
-    history = df[df["date"] < match["date"]]
+    smoothed_avg = (total_goals + SMOOTHING * league_average) / (number_of_matches + SMOOTHING)
 
-    # Initial warm-up period
-    if len(history) < MIN_HISTORY:
+    return smoothed_avg
+
+for index, match in df.iterrows():
+    prediction_date = match["date"]
+    home_team = match["home_team"]
+    away_team = match["away_team"]
+
+    historical_matches = df[df["date"] < prediction_date]
+
+    if len(historical_matches) < 50:
         continue
 
-    league_home_avg = history["home_goals"].mean()
-    league_away_avg = history["away_goals"].mean()
+    # League Average
+    league_home_avg = historical_matches["home_goals"].mean()
+    league_away_avg = historical_matches["away_goals"].mean()
 
-    if league_home_avg <= 0 or league_away_avg <= 0:
-        raise ValueError("Invalid league scoring baseline")
+    home = historical_matches[historical_matches["home_team"] == home_team]
+    away = historical_matches[historical_matches["away_team"] == away_team]
 
-    home_history = history[
-        history["home_team"] == match["home_team"]
-    ]
+    if home.empty or away.empty:
+        continue
 
-    away_history = history[
-        history["away_team"] == match["away_team"]
-    ]
+    # Home
+    avg_home_goals = smoothed_rate(home["home_goals"], league_home_avg)
+    home_attack_strength = avg_home_goals / league_home_avg
+    avg_goals_conceded_home = smoothed_rate(home["away_goals"], league_away_avg)
+    home_defensive_weakness = avg_goals_conceded_home / league_away_avg
 
-    # Home team attack
-    home_attack = (
-        smoothed_rate(
-            home_history["home_goals"],
-            league_home_avg
-        ) / league_home_avg
-    )
+    # Away
+    avg_away_goals = smoothed_rate(away["away_goals"], league_away_avg)
+    away_attack_strength = avg_away_goals / league_away_avg
+    avg_goals_conceded_away  = smoothed_rate(away["home_goals"], league_home_avg)
+    away_defensive_weakness = avg_goals_conceded_away / league_home_avg
 
-    # Away team defence
-    away_defence = (
-        smoothed_rate(
-            away_history["home_goals"],
-            league_home_avg
-        ) / league_home_avg
-    )
+    # Lambda Calculation
+    lambda_home = league_home_avg * home_attack_strength * away_defensive_weakness
+    lambda_away = league_away_avg * away_attack_strength * home_defensive_weakness
 
-    # Away team attack
-    away_attack = (
-        smoothed_rate(
-            away_history["away_goals"],
-            league_away_avg
-        ) / league_away_avg
-    )
+    actual_home_goals = match["home_goals"]
+    actual_away_goals = match["away_goals"]
 
-    # Home team defence
-    home_defence = (
-        smoothed_rate(
-            home_history["away_goals"],
-            league_away_avg
-        ) / league_away_avg
-    )
+    match_features = {
+        "date": prediction_date,
+        "home_team": home_team,
+        "away_team": away_team,
+        "lambda_home": lambda_home,
+        "lambda_away": lambda_away,
+        "actual_home_goals": actual_home_goals,
+        "actual_away_goals": actual_away_goals
+        }  
 
-    lambda_home = league_home_avg * home_attack * away_defence
-    lambda_away = league_away_avg * away_attack * home_defence
+    features.append(match_features)
 
-    features.append({
-        "date": match["date"].date().isoformat(),
-        "home_team": match["home_team"],
-        "away_team": match["away_team"],
-        "historical_matches": len(history),
-        "home_attack_strength": round(home_attack, 4),
-        "away_defence_weakness": round(away_defence, 4),
-        "away_attack_strength": round(away_attack, 4),
-        "home_defence_weakness": round(home_defence, 4),
-        "lambda_home": round(lambda_home, 4),
-        "lambda_away": round(lambda_away, 4),
-        "actual_home_goals": match["home_goals"],
-        "actual_away_goals": match["away_goals"],
-    })
-
-
-# 4. Save Gold dataset
 gold = pd.DataFrame(features)
 
-if gold.empty:
-    raise ValueError("Not enough history to generate features")
+print(gold.head())
 
-OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+OUTPUT_FILE = PROJECT_ROOT / "data" / "features" / "brazil_serie_a_2025_prematch.csv"
+
 gold.to_csv(OUTPUT_FILE, index=False)
 
-print(f"Gold records created: {len(gold)}")
-print(f"Saved to: {OUTPUT_FILE}")
-print(gold.head().to_string(index=False))
+print(f"Gold dataset exported to: {OUTPUT_FILE}")
+print(f"Total matches exported: {len(gold)}")
+
+   
