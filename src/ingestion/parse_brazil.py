@@ -4,81 +4,97 @@ import re
 import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
+SEASON = 2026 
 
-RAW_FILE = PROJECT_ROOT / "data" / "raw" / "brazil_serie_a_2025.txt"
+RAW_FILE = PROJECT_ROOT / "data" / "raw" / f"brazil_serie_a_{SEASON}.txt"
+OUTPUT_FILE = PROJECT_ROOT / "data" / "processed" / f"brazil_serie_a_{SEASON}.csv"
 
-OUTPUT_FILE = PROJECT_ROOT / "data" / "processed" / "brazil_serie_a_2025.csv"
 
-current_matchday = None
-current_date = None
-weekdays = ("sun", "mon", "tue", "wed", "thu", "fri", "sat")
-matches = []
+def parse_matches(raw_file:Path, season:int) -> pd.DataFrame:
 
-with open(RAW_FILE, "r", encoding="utf-8-sig") as file:
-    for index, line in enumerate(file, start=1):
-        line = line.strip()
+    weekdays = ("sun", "mon", "tue", "wed", "thu", "fri", "sat")
+    matches = []
+    current_matchday = None
+    current_date = None
 
-        if "Matchday" in line:
-            current_matchday = int(line.split()[-1])
-    
-        is_date_line = line.lower().startswith(weekdays)
-        if is_date_line:
-            if len((line.split())) == 3:
-                full_date = line + " 2025"
-            else:
-                full_date = line    
-            current_date = datetime.strptime(full_date, "%a %b %d %Y")
+    with open(RAW_FILE, "r", encoding="utf-8-sig") as file:
+        for index, line in enumerate(file, start=1):
+            line = line.strip()
 
-        if " v " in line:
-            result = re.search(r"\d+-\d+", line)
-            if result:
-                score = result.group()
-                goals = score.split("-")
-                home_goals = int(goals[0])
-                away_goals = int(goals[-1])
-
-                parts = line.split(" v ")
-                away_team = parts[1].split(score)
-                away_team = away_team[0].strip()
-                home_team = parts[0]
-
-                if ":" in home_team:
-                    home_team = home_team.partition(" ")
-                    home_team = home_team[-1].strip()
-                    
+            if "Matchday" in line:
+                current_matchday = int(line.split()[-1])
+        
+            is_date_line = line.lower().startswith(weekdays)
+            if is_date_line:
+                if len((line.split())) == 3:
+                    full_date = f"{line} {season}"
                 else:
-                    home_team = parts[0].strip()
-                
+                    full_date = line    
+                current_date = datetime.strptime(full_date, "%a %b %d %Y")
 
-                match = {
-                    "matchday": current_matchday,
-                    "date": current_date,
-                    "home_team": home_team,
-                    "away_team": away_team,
-                    "home_goals": home_goals,
-                    "away_goals": away_goals
-                }
+            if " v " in line:
+                result = re.search(r"\d+-\d+", line)
+                if result:
+                    score = result.group()
+                    goals = score.split("-")
+                    home_goals = int(goals[0])
+                    away_goals = int(goals[-1])
 
-                matches.append(match)
+                    parts = line.split(" v ")
+                    away_team = parts[1].split(score)
+                    away_team = away_team[0].strip()
+                    home_team = parts[0]
 
-# Basic data validation
-df = pd.DataFrame(matches)
+                    if ":" in home_team:
+                        home_team = home_team.partition(" ")
+                        home_team = home_team[-1].strip()
+                        
+                    else:
+                        home_team = parts[0].strip()
+                    
 
-if len(df) != 380:
-    raise ValueError(
-        f"Expected 380 matches and 20 teams. Found: {len(df)}")
+                    match = {
+                        "matchday": current_matchday,
+                        "date": current_date,
+                        "home_team": home_team,
+                        "away_team": away_team,
+                        "home_goals": home_goals,
+                        "away_goals": away_goals
+                    }
 
-if df["home_team"].nunique() != 20:
-    raise ValueError(
-        f"Expected 20 teams. Found: {df['home_team'].nunique()}")
+                    matches.append(match)
 
-if df.isnull().any().any():
-    raise ValueError("Found missing values")
+    # Basic data validation
+    df = pd.DataFrame(matches)
 
-duplicates = df.duplicated(
-    subset=["date", "home_team", "away_team"]).sum()
+    if len(df) != 380:
+        raise ValueError(
+            f"Expected 380 matches and 20 teams. Found: {len(df)}")
 
-if duplicates > 0:
-    raise ValueError(f"Found {duplicates} duplicates fixtures")
+    if df["home_team"].nunique() != 20:
+        raise ValueError(
+            f"Expected 20 teams. Found: {df['home_team'].nunique()}")
 
-df.to_csv(OUTPUT_FILE, index=False)
+    if df.isnull().any().any():
+        raise ValueError("Found missing values")
+
+    duplicates = df.duplicated(
+        subset=["date", "home_team", "away_team"]).sum()
+
+    if duplicates > 0:
+        raise ValueError(f"Found {duplicates} duplicates fixtures")
+
+def main() -> None:
+    df = parse_matches(RAW_FILE, SEASON)
+    df.to_csv(OUTPUT_FILE, index=False)
+
+    teams = set(df["home_team"]) | set(df["away_team"])
+    print(f"Season: {SEASON}")
+    print(f"Matches parsed: {len(df)}")
+    print(f"Unique teams: {len(teams)}")
+    print(f"First match: {df['date'].min().date()}")
+    print(f"Last match: {df['date'].max().date()}")
+    print(f"Saved: {OUTPUT_FILE}")
+
+if __name__ == "__main__":
+    main()
